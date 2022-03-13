@@ -1,0 +1,240 @@
+
+
+
+/*communs*/
+
+
+body
+{
+    box-sizing:border-box;   
+    margin:0px; 
+}
+
+
+
+
+/* Header */@at-root
+header, body{
+    
+    font-family:"raleway";
+    line-height:35px;
+    }
+
+header{
+    margin:2%;
+    display:flex;
+    justify-content: space-between;
+    nav{
+        width:60%;
+        ul{
+            list-style-type:none;   
+            display:flex;
+            justify-content: space-evenly;
+            font-weight:600;
+            a{
+                text-decoration:none;
+                color:black;
+                &:hover{
+                    color:rgb(255, 123, 0)
+                }
+            }
+        }
+    }
+}
+    
+.banner{
+    height:500px;
+    width:100%;
+    margin:auto;
+    background-color:cornflowerblue;
+    background-image:url("../images/images_mini/montagnes_biplacejaune.jpg") ;
+    background-position : -200px top; 
+    h1{
+        color:white;
+        text-shadow:5px 5px 5px rgb(60, 37, 114);
+    font-family:'carter one';
+    font-weight:400;
+    font-size:45px;
+    margin-left:2%;
+    margin-top:20px;
+    transform:translateY(5px);
+    padding-bottom:50px;
+    line-height:100px;
+    }
+
+
+} 
+
+ /*
+.banner_img{
+    width:100%;
+    
+    
+  }
+ 
+.banner_img img{
+    width:100%;
+    height:500px;
+    object-fit:cover;   
+    
+  }
+  
+.banner_content{
+    
+    color:white;
+    font-family:'Caveat';
+    font-size:30px;
+    transform:translateY(-250px);
+    padding-bottom:50px;
+}
+*/
+
+.presentation{
+    h2{
+        font-family:'carter one';
+        color:grey;line-height:55px;
+        span{
+            font-family:'Rock salt';
+            color:red;
+        }
+    }
+}
+
+
+
+
+.container_jorge_img{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.jorge_img{    
+    margin:5px 10px 5px 10px;
+}
+
+.img_carte{
+    width:800px;
+    display:block;
+    margin:auto;
+}
+
+
+
+
+
+
+.interrogations{
+    margin:80px 3% 80px 3%;
+    display:flex;
+    flex-direction:column;
+    align-items:center; 
+    h2
+    {margin-left:8%;
+    text-align:center;}
+    .faq{
+        width:100%
+    }   
+    .question{        
+        height:70px;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        padding-left:3%;
+        border:2px solid rgb(218, 247, 218);
+        background-color:rgb(218, 247, 218);
+        border-radius:10px;
+        margin-top:20px;
+        p{
+        margin-top:20px;}   
+        img{             
+        
+        background-color:rgb(255, 123, 0);
+        padding:10px ;
+        margin-right:1px;
+        border-radius:10px;
+        transition:0.5s;
+    &:hover{
+        background-color:cornflowerblue;}
+    } }         
+    .reponse{
+        opacity:0;
+        width:90%;
+        height:0px;
+        margin-right:2%;
+        padding-left:3%;
+        border:2px solid rgb(255, 123, 0);
+        background-color:white;
+        border-radius:10px;            
+        p{
+        padding:2px 70px 2px 20px;}            
+    }   
+}
+
+@keyframes slidein {
+    from {
+      height: 0px;
+      opacity:0;
+    }
+  
+    to {
+      height: 150px;
+      opacity:1;    }
+  }
+
+
+.question{
+    &:active{
+        &+.reponse{
+            animation: slidein 1s forwards ease-in-out; }
+        &>img{
+            transform:rotate(180deg);
+            background-color:cornflowerblue;}
+        }}
+
+
+.deltalab {
+    a{
+       text-decoration:none;
+       font-weight:bold;
+       color : black;
+       &:hover  {
+         color:rgb(255, 123, 0);}
+       }
+   }
+
+
+.faq_image{
+    margin-top:60px;
+}
+
+footer{
+    background-color:rgb(38, 79, 119);
+    height:150px;
+    color:white;
+    ul{
+        padding-left:0px;
+        display:flex;
+        font-weight:600;
+        justify-content:space-evenly;
+        gap:2%;
+        li{
+            list-style-type:none;
+            padding-top:50px;
+            a{
+                text-decoration:none;
+                color:white;
+                &:hover{
+                    color:rgb(255, 123, 0)
+                }
+            }
+        }
+    }
+}
+
+
+
+/* VERSION TABLETTE 
+@media screen and (max-width:768px)
+
+*/
