@@ -76,14 +76,36 @@ header nav ul a:hover {
     padding-bottom:50px;
 }
 */
-.presentation h2 {
+.presentation {
+  margin-top: 50px;
+  text-align: center;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.presentation .presentation_premiertitre {
   font-family: "carter one";
   color: grey;
-  line-height: 55px;
+  line-height: 70px;
 }
-.presentation h2 span {
+.presentation .presentation_premiertitre span {
   font-family: "Rock salt";
   color: red;
+}
+.presentation p {
+  text-align: left;
+  margin-left: 3%;
+  margin-bottom: 70px;
+  margin-top: 30px;
+}
+.presentation p .presentation_titre {
+  font-weight: 600;
+  font-size: 20px;
+}
+.presentation .presentation_deuxiemetitre {
+  font-family: "carter one";
+  color: grey;
+  margin-top: 30px;
+  margin-bottom: 60px;
 }
 
 .container_jorge_img {
@@ -100,6 +122,8 @@ header nav ul a:hover {
   width: 800px;
   display: block;
   margin: auto;
+  margin-top: 100px;
+  margin-bottom: 120px;
 }
 
 .interrogations {
@@ -111,9 +135,12 @@ header nav ul a:hover {
 .interrogations h2 {
   margin-left: 8%;
   text-align: center;
+  font-family: "carter one";
+  color: grey;
 }
 .interrogations .faq {
   width: 100%;
+  max-width: 1000px;
 }
 .interrogations .question {
   height: 70px;
@@ -174,11 +201,11 @@ header nav ul a:hover {
     opacity: 1;
   }
 }
-.question:active + .reponse {
+input[type=checkbox]:checked:checked + .reponse {
   -webkit-animation: slidein 1s forwards ease-in-out;
           animation: slidein 1s forwards ease-in-out;
 }
-.question:active > img {
+input[type=checkbox]:checked:checked ~ img {
   transform: rotate(180deg);
   background-color: cornflowerblue;
 }
@@ -220,6 +247,7 @@ footer ul li a:hover {
   color: #ff7b00;
 }
 
+/*VERSION GRAND ECRAN > 1380px : changer bg position de photo de banniere*/
 /* VERSION TABLETTE 
 @media screen and (max-width:768px)
 
