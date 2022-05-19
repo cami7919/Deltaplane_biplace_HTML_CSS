@@ -2,6 +2,7 @@
 body {
   box-sizing: border-box;
   margin: 0px;
+  background-color: rgba(190, 217, 196, 0.221);
 }
 
 /* Header */
@@ -21,15 +22,33 @@ header nav {
 header nav ul {
   list-style-type: none;
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   font-weight: 600;
+  font-size: 18px;
+  line-height: 35px;
+  gap: 25px;
+  padding-left: 20px;
+}
+@media (max-width: 620px) {
+  header nav ul {
+    flex-direction: row;
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 500px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 1px;
+  }
 }
 header nav ul a {
   text-decoration: none;
-  color: black;
+  color: rgb(42, 68, 118);
 }
 header nav ul a:hover {
-  color: #ff7b00;
+  color: rgb(255, 123, 0);
 }
 
 .banner {
@@ -37,12 +56,55 @@ header nav ul a:hover {
   width: 100%;
   margin: auto;
   background-color: cornflowerblue;
-  background-image: url("../images/images_mini/montagnes_biplacejaune.jpg");
-  background-position: -200px top;
+  /*background-image:url("../images/images_mini/banniere_biplacejaune.jpg") ;*/
+}
+@media (max-width: 992px) {
+  .banner {
+    height: 400px;
+  }
+}
+@media (max-width: 500px) {
+  .banner {
+    height: 350px;
+  }
+}
+.banner banner_img {
+  width: 100%;
+  height: 100%;
+}
+.banner img {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 500px;
+}
+@media (max-width: 992px) {
+  .banner img {
+    height: 400px;
+    transform: translate(-170px, 0);
+  }
+}
+@media (max-width: 775px) {
+  .banner img {
+    transform: translate(-250px, 0);
+  }
+}
+@media (max-width: 620px) {
+  .banner img {
+    transform: translate(-350px, 0px);
+  }
+}
+@media (max-width: 500px) {
+  .banner img {
+    transform: translateX(-520px, 0px);
+    height: 400px;
+  }
 }
 .banner h1 {
+  position: absolute;
+  top: 140px;
   color: white;
-  text-shadow: 5px 5px 5px #3c2572;
+  text-shadow: 5px 5px 5px rgb(60, 37, 114);
   font-family: "carter one";
   font-weight: 400;
   font-size: 45px;
@@ -52,30 +114,18 @@ header nav ul a:hover {
   padding-bottom: 50px;
   line-height: 100px;
 }
-
-/*
-.banner_img{
-    width:100%;
-
-
+@media (max-width: 620px) {
+  .banner h1 {
+    font-size: 35px;
   }
-
-.banner_img img{
-    width:100%;
-    height:500px;
-    object-fit:cover;   
-
-  }
-
-.banner_content{
-
-    color:white;
-    font-family:'Caveat';
-    font-size:30px;
-    transform:translateY(-250px);
-    padding-bottom:50px;
 }
-*/
+@media (max-width: 420px) {
+  .banner h1 {
+    font-size: 30px;
+    margin-top: 0px;
+  }
+}
+
 .presentation {
   margin-top: 50px;
   text-align: center;
@@ -83,8 +133,8 @@ header nav ul a:hover {
   margin-right: 2%;
 }
 .presentation .presentation_premiertitre {
-  font-family: "carter one";
-  color: grey;
+  font-family: "Carter One";
+  color: rgb(42, 68, 118);
   line-height: 70px;
 }
 .presentation .presentation_premiertitre span {
@@ -99,11 +149,13 @@ header nav ul a:hover {
 }
 .presentation p .presentation_titre {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 21px;
+  font-style: italic;
+  color: rgb(42, 68, 118);
 }
 .presentation .presentation_deuxiemetitre {
   font-family: "carter one";
-  color: grey;
+  color: rgb(42, 68, 118);
   margin-top: 30px;
   margin-bottom: 60px;
 }
@@ -119,7 +171,8 @@ header nav ul a:hover {
 }
 
 .img_carte {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   display: block;
   margin: auto;
   margin-top: 100px;
@@ -136,28 +189,56 @@ header nav ul a:hover {
   margin-left: 8%;
   text-align: center;
   font-family: "carter one";
-  color: grey;
+  color: rgb(42, 68, 118);
 }
 .interrogations .faq {
   width: 100%;
   max-width: 1000px;
 }
 .interrogations .question {
-  height: 70px;
+  height: 85px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 3%;
-  border: 2px solid #daf7da;
-  background-color: #daf7da;
+  border: 2px solid rgb(218, 247, 218);
+  background-color: rgba(167, 203, 167, 0.76);
   border-radius: 10px;
   margin-top: 20px;
 }
+@media (max-width: 425px) {
+  .interrogations .question {
+    height: 70px;
+  }
+}
 .interrogations .question p {
-  margin-top: 20px;
+  margin-top: 22px;
+  font-weight: 600;
+  color: rgb(42, 68, 118);
+  line-height: 30px;
+}
+@media (max-width: 444px) {
+  .interrogations .question p {
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 444px) {
+  .interrogations .question p {
+    margin-top: 6px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 444px) {
+  .interrogations .question p {
+    margin-top: 5px;
+    font-size: 10px;
+  }
 }
 .interrogations .question img {
-  background-color: #ff7b00;
+  background-color: rgb(255, 123, 0);
   padding: 10px;
   margin-right: 1px;
   border-radius: 10px;
@@ -172,7 +253,7 @@ header nav ul a:hover {
   height: 0px;
   margin-right: 2%;
   padding-left: 3%;
-  border: 2px solid #ff7b00;
+  border: 2px solid rgb(255, 123, 0);
   background-color: white;
   border-radius: 10px;
 }
@@ -216,15 +297,29 @@ input[type=checkbox]:checked:checked ~ img {
   color: black;
 }
 .deltalab a:hover {
-  color: #ff7b00;
+  color: rgb(255, 123, 0);
 }
 
 .faq_image {
   margin-top: 60px;
 }
 
+.scrollup {
+  width: 45px;
+  height: 45px;
+  border-radius: 25px;
+  background-color: rgb(239, 241, 247);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.scrollup img {
+  background-color: cornflowerblue;
+  transform: translate(7px, 7px);
+}
+
 footer {
-  background-color: #264f77;
+  background-color: rgb(38, 79, 119);
   height: 150px;
   color: white;
 }
@@ -244,7 +339,7 @@ footer ul li a {
   color: white;
 }
 footer ul li a:hover {
-  color: #ff7b00;
+  color: rgb(255, 123, 0);
 }
 
 /*VERSION GRAND ECRAN > 1380px : changer bg position de photo de banniere*/
